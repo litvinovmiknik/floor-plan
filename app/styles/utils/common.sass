@@ -1,0 +1,24 @@
+body
+    font-family: 'Roboto', sans-serif
+    font-weight: 400
+
+.container
+    width: 1200px
+    margin: 0 auto
+    @media (max-width: 1220px)
+        width: 100%
+
+.row
+    display: flex
+    justify-content: space-evenly
+    padding: 40px 0
+    @media (max-width: 1220px)
+        flex-direction: column
+        align-items: center
+
+    &:nth-child(even)
+        background-color: #eee
+
+    &__apartment-plan, &__apartment-desc
+        @media (max-width: 1220px)
+            margin-top: 40px

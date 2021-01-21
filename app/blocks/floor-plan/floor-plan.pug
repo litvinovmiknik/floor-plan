@@ -1,0 +1,9 @@
+mixin floor-plan($img, $section, $data)
+	.floor-plan&attributes(attributes)
+		+title('План этажа')
+		._img-wrap
+			img._img(src="assets/images/" + $img alt="")
+			each val, index in $data
+				- let active = (index === 0) ? 'floor-plan__pointer--active' : '';
+				._pointer(class=active data-id=$data[index].id data-area=$data[index].area)= $data[index].room
+			._section= $section

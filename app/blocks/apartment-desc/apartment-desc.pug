@@ -1,0 +1,10 @@
+mixin apartment-desc($room, $area)
+	.apartment-desc&attributes(attributes)
+		+title('Описание квартиры')
+		._col
+			._room= $room
+			._label комнатная
+		._col
+			._area= $area
+			._label Общая площадь
+		a._button(href="#") Интересуюсь квартирой

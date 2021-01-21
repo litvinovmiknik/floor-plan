@@ -1,0 +1,78 @@
+extends layouts/default
+block title
+    title Поэтажный план
+block link
+    link(rel="preconnect" href="https://fonts.gstatic.com")
+    link(rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap")
+    link(rel="stylesheet" href="assets/styles/index.css")
+block body
+    .container
+        .row
+            - 
+                let data;
+                data = [
+                    {id: '1', area: '60,22', room: '2'},
+                    {id: '2', area: '40,70', room: '1'},
+                    {id: '3', area: '40,70', room: '1'},
+                    {id: '4', area: '94,84', room: '2'},
+                    {id: '5', area: '70,65', room: '2'},
+                    {id: '6', area: '101,59', room: '3'}
+                ];
+            +floor-plan('1/2_floor.jpg', '1 секция 2 этаж', data)
+            +apartment-plan('1/2k-60,22.jpg')(class="row__apartment-plan")
+            +apartment-desc(data[0].room, data[0].area)(class="row__apartment-desc")
+        .row
+            - 
+                data = [
+                    {id: '7', area: '67,89', room: '2'},
+                    {id: '8', area: '48,09', room: '1'},
+                    {id: '9', area: '48,09', room: '1'},
+                    {id: '10', area: '102,51', room: '2'},
+                    {id: '11', area: '70,65', room: '2'},
+                    {id: '12', area: '101,59', room: '3'}
+                ];
+            +floor-plan('1/4-7_floor.jpg', '1 секция 4-7 этажи', data)
+            +apartment-plan('1/2k-67,89.jpg')(class="row__apartment-plan")
+            +apartment-desc(data[0].room, data[0].area)(class="row__apartment-desc")
+        .row
+            - 
+                data = [
+                    {id: '13', area: '67,89', room: '2'},
+                    {id: '14', area: '48,09', room: '1'},
+                    {id: '15', area: '48,09', room: '1'},
+                    {id: '16', area: '110,66', room: '3'},
+                    {id: '17', area: '70,65', room: '2'},
+                    {id: '18', area: '101,59', room: '3'}
+                ];
+            +floor-plan('1/8-12_floor.jpg', '1 секция 8-12 этажи', data)
+            +apartment-plan('1/2k-67,89.jpg')(class="row__apartment-plan")
+            +apartment-desc(data[0].room, data[0].area)(class="row__apartment-desc")
+        .row
+            - 
+                data = [
+                    {id: '19', area: '91,58', room: '3'},
+                    {id: '20', area: '52,85', room: '1'},
+                    {id: '21', area: '52,99', room: '1'},
+                    {id: '22', area: '57,39', room: '1'},
+                    {id: '23', area: '86,76', room: '3'},
+                    {id: '24', area: '95,31', room: '3'}
+                ];
+            +floor-plan('2/2-7_floor.jpg', '2 секция 2-7 этажи', data)
+            +apartment-plan('2/3k-91,58.jpg')(class="row__apartment-plan")
+            +apartment-desc(data[0].room, data[0].area)(class="row__apartment-desc")
+        .row
+            - 
+                data = [
+                    {id: '25', area: '91,58', room: '3'},
+                    {id: '26', area: '52,85', room: '1'},
+                    {id: '27', area: '52,99', room: '1'},
+                    {id: '28', area: '57,39', room: '1'},
+                    {id: '29', area: '93,0', room: '3'},
+                    {id: '30', area: '95,31', room: '3'}
+                ];
+            +floor-plan('2/8-12_floor.jpg', '2 секция 8-12 этажи', data)
+            +apartment-plan('2/3k-91,58.jpg')(class="row__apartment-plan")
+            +apartment-desc(data[0].room, data[0].area)(class="row__apartment-desc")
+block script
+    script(src="assets/scripts/libs/jquery-3.5.1.min.js")
+    script(src="assets/scripts/index.js")
