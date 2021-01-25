@@ -73,6 +73,9 @@ block body
             +floor-plan('2/8-12_floor.jpg', '2 секция 8-12 этажи', data)
             +apartment-plan('2/3k-91,58.jpg')(class="row__apartment-plan")
             +apartment-desc(data[0].room, data[0].area)(class="row__apartment-desc")
+    +popup-form()
+    +popup-success()
 block script
     script(src="assets/scripts/libs/jquery-3.5.1.min.js")
+    script(src="assets/scripts/libs/jquery.maskedinput.min.js")
     script(src="assets/scripts/index.js")

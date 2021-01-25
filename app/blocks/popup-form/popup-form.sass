@@ -1,0 +1,99 @@
+.popup-form
+	display: none
+	align-items: center
+	justify-content: center
+	width: 100%
+	height: 100%
+	position: fixed
+	top: 0
+	left: 0
+	z-index: 5
+	background-color: rgba(0,0,0,.7)
+
+	&__form
+		display: flex
+		flex-direction: column
+		background-color: #fff
+		width: 300px
+		padding: 20px
+		box-sizing: border-box
+		border-radius: 3px
+
+	&__title
+		font-size: 18px
+		font-weight: 700
+		text-align: center
+
+	&__section
+		color: $blue
+		font-size: 14px
+		font-weight: 700
+		margin-top: 20px
+		border: none
+		outline: none
+		background-color: transparent
+
+	&__room
+		display: flex
+		align-items: baseline
+		margin-top: 10px
+
+	&__room-label
+		color: $blue
+		font-size: 14px
+		font-weight: 700
+
+	&__room-value
+		color: $blue
+		font-size: 14px
+		font-weight: 700
+		width: 100px
+		padding-left: 5px
+		box-sizing: border-box
+		border: none
+		outline: none
+		background-color: transparent
+		margin-right: 5px
+
+	&__area
+		display: flex
+		align-items: baseline
+		margin-top: 10px
+		margin-bottom: 20px
+
+	&__area-label
+		color: $blue
+		font-size: 14px
+		font-weight: 700
+
+	&__area-value
+		color: $blue
+		font-size: 14px
+		font-weight: 700
+		width: 100px
+		padding-left: 5px
+		box-sizing: border-box
+		border: none
+		outline: none
+		background-color: transparent
+
+	&__input
+		height: 34px
+		color: #000
+		font-size: 14px
+		padding: 10px 15px
+		box-sizing: border-box
+		outline: none
+		border: 1px solid #ccc
+		background-color: transparent
+		margin-bottom: 10px
+
+	&__button
+		color: #fff
+		font-size: 12px
+		font-weight: 700
+		background-color: $orange
+		padding: 10px 15px
+		border: none
+		outline: none
+		cursor: pointer

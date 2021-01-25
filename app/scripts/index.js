@@ -1,21 +1,13 @@
+import '../blocks/floor-plan/floor-plan.js';
+import '../blocks/popup-form/popup-form.js';
+import '../blocks/popup-success/popup-success.js';
+
 $(function() {
-    $('.floor-plan__pointer').click(function() {
-        $(this).parents('.row').find('.floor-plan__pointer').removeClass('floor-plan__pointer--active');
-        $(this).addClass('floor-plan__pointer--active');
+    $('input[name="phone"]').mask("+7 (999) 999-9999");
 
-        let room = $(this).text();
-        $(this).parents('.row').find('.apartment-desc__room').text(room);
-        
-        let area = $(this).data('area');
-        $(this).parents('.row').find('.apartment-desc__area').text(area);
-
-        let imgName = room + 'k' + '-' + area + '.jpg';
-
-        let src = $(this).parents('.row').find('.apartment-plan__img').attr('src');
-        let arr = src.split('/');
-        arr.splice(3, 1, imgName);
-        let newSrc = arr.join('/');
-        
-        $(this).parents('.row').find('.apartment-plan__img').attr('src', newSrc);
-    });
+    let hash = $(location).attr('hash');
+    if (hash.indexOf('popup') === 1) {
+        let popupClassName = hash.replace(/^#/, '.');
+        $(popupClassName).css('display', 'flex');
+    }
 });

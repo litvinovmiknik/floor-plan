@@ -1,0 +1,14 @@
+mixin popup-form()
+	.popup-form&attributes(attributes)
+		form._form(action="#" method="post")
+			._title Отправьте заявку и наш менеджер свяжется с вами
+			input._section(type="text" name="section" value="1 секция 2 этаж" readonly)
+			._room
+				label._room-label Комнат:
+				input._room-value(type="text" name="room" value="2" readonly)
+			._area
+				label._area-label Общая площадь:
+				input._area-value(type="text" name="area" value="60,22" readonly)
+			input._input(type="text" name="name" placeholder="Ваше имя")
+			input._input(type="text" name="phone" placeholder="Ваш телефон")
+			button._button(type="submit") Отправить
